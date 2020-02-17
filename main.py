@@ -18,8 +18,8 @@ hello = pyglet.sprite.Sprite(hello_image, x=150, y=50)
 hi_image = pyglet.image.load('assets/hero/sliced/idle-4.png')
 hi = pyglet.sprite.Sprite(hi_image, x=200, y=50)
 
-image_image = pyglet.image.load('assets/hero/sliced/jump-1.png)
-image = pyglet.sprite.Sprite(image_image, x=250, y=50)
+image_image = pyglet.image.load('assets/hero/sliced/kick.png)
+image = pyglet.sprite.Sprite(image_image, x=20, y=50)
 
 health_bar = pyglet.text.Label(str(hp), x = 200, y = 200)    
 
