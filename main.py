@@ -6,22 +6,29 @@ from time import sleep
 
 hp = 100
 
+doing_image = pyglet.image.load('assets/hero/sliced/kick.png')
+doing = pyglet.sprite.Sprite(doing_image, x=20, y=50)
+
+hairspray_image = pyglet.image.load('assets/hero/sliced/parachute.png')
+hairspray = pyglet.sprite.Sprite(hairspray_image, x=50, y=100)
+
 img_image = pyglet.image.load('assets/hero/sliced/idle-1.png')
 img = pyglet.sprite.Sprite(img_image, x=50, y=50)
 
 como_image = pyglet.image.load('assets/hero/sliced/idle-2.png')
 como = pyglet.sprite.Sprite(como_image, x=100, y=50)
 
-hello_image = pyglet.image.load('assets/hero/sliced/idle-3.png')
-hello = pyglet.sprite.Sprite(hello_image, x=150, y=50)
+other_image = pyglet.image.load('assets/hero/sliced/idle-3.png')
+other = pyglet.sprite.Sprite(other_image, x=150, y=50)
 
-hi_image = pyglet.image.load('assets/hero/sliced/idle-4.png')
-hi = pyglet.sprite.Sprite(hi_image, x=200, y=50)
+hello_image = pyglet.image.load('assets/setting.png')
+hello = pyglet.sprite.Sprite(hello_image, x=150, y=300)
 
-image_image = pyglet.image.load('assets/hero/sliced/kick.png)
-image = pyglet.sprite.Sprite(image_image, x=20, y=50)
+txt = pyglet.text.Label('hi', x = 300, y = 200) 
 
-health_bar = pyglet.text.Label(str(hp), x = 200, y = 200)    
+stuff = pyglet.text.Label('Hi', x = 200, y = 200) 
+
+health_bar = pyglet.text.Label(str(hp), x = 200, y = 100)    
 
 keys = pyglet.window.key.KeyStateHandler()
 
@@ -96,6 +103,12 @@ def on_draw():
     window.clear()
     img.draw()
     health_bar.draw()
+    hello.draw()
+    como.draw()
+    doing.draw()
+    hairspray.draw()
+    txt.draw()
+    stuff.draw()
 
 pyglet.clock.schedule(update)
 pyglet.app.run()
